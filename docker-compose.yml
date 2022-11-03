@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  story:
+    build: .
+    ports:
+      - 6006:6006
+    entrypoint:
+      - yarn
+      - storybook
+  app:
+    build: .
+    ports:
+      - 3000:3000
+    entrypoint:
+      - yarn
+      - start
